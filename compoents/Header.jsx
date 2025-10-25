@@ -1,3 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react-hooks/set-state-in-effect */
+/* eslint-disable @next/next/no-html-link-for-pages */
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -38,10 +41,11 @@ const Header = () => {
   return (
     <>
       <header
-        className={`w-[86%] xl:w-4/5 xl:h-28 bg-neutral-100 rounded-full left-[7%] xl:left-[10%] top-16 fixed py-2 shadow-md mx-auto flex items-center px-6 z-50 ${roboto.className}`}
+        className={`w-[86%] xl:w-4/5 xl:h-24 lg:w-[90%] lg:left-[5%] bg-neutral-100 rounded-full left-[7%] xl:left-[10%] top-16 fixed py-2 shadow-md mx-auto flex items-center px-6 z-50 ${roboto.className}`}
       >
         <nav className="flex justify-between items-center w-full">
-          <a href="/" className="flex items-center h-full">
+          <a href="/" className="flex items-center gap-x-2 h-full">
+            <img src="/logo.png" alt="logo" className=" w-10 lg:w-14" />
             <h1 className="lg:text-2xl  text-xl text-green-950 font-condensed">
               JSO
             </h1>
@@ -87,7 +91,7 @@ const Header = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-black bg-opacity-50 z-40 xl:hidden transition-opacity duration-300 ${
           isMobileMenuOpen ? "opacity-10" : "opacity-0 pointer-events-none"
         }`}
         onClick={toggleMobileMenu}
@@ -95,7 +99,7 @@ const Header = () => {
 
       {/* Mobile Menu Dropdown */}
       <div
-        className={`fixed top-40 left-[5%] w-[90%] bg-white rounded-3xl shadow-xl z-50 lg:hidden transform transition-all duration-300 ease-in-out ${
+        className={`fixed top-40 left-[5%] w-[90%] bg-white rounded-3xl shadow-xl z-50 xl:hidden transform transition-all duration-300 ease-in-out ${
           isMobileMenuOpen
             ? "translate-y-0 opacity-100"
             : "-translate-y-4 opacity-0 pointer-events-none"

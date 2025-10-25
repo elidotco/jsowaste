@@ -7,7 +7,7 @@ const Footer = () => {
         {/* Company Info Section */}
         <div>
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 bg-gradient-to-br rounded-full from-green-500 to-orange-500 "></div>
+            <img src="/logo.png" alt="JSO Logo" className="w-12 h-12" />
             <h2 className="text-2xl font-bold">JSO</h2>
           </div>
 
