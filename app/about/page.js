@@ -21,8 +21,9 @@ Our vision is to be recognized globally as the trusted leader in waste managemen
   wasteManagement: {
     title: "Revolutionizing Waste Management | Catalyzing Sustainable Growth",
     paragraphs: [
-      "Through our GO WASTE project, we are revolutionizing waste management by employing digital technologies to streamline the collection, sorting, and recycling of household waste. By tackling this critical issue head-on, we aim to reduce environmental pollution, promote resource conservation, and create new economic opportunities within the circular economy.",
-      "Our civil engineering projects, consultation services, and brokerage activities are designed to support sustainable infrastructure development, promote best practices, and facilitate trade and investment opportunities. By fostering collaboration between governments, private sectors, and communities, we strive to catalyze economic growth while ensuring environmental and social responsibility.",
+      `JSO Waste and Renewables is transforming Ghana's waste sector through innovative collection, sorting, and recycling solutions that combine 50+ years of expertise with modern technology. By tackling critical waste management challenges head-on, we reduce environmental pollution, promote resource conservation through waste segregation, and create economic opportunities within the circular economy.
+`,
+      `Our comprehensive approach supports the informal sector—which handles 60-70% of Ghana's waste collection—while working closely with communities, businesses, and government partners to develop sustainable solutions. Through education, action, and strategic collaboration, we're catalyzing economic growth, ensuring environmental responsibility, and positioning Ghana at the forefront of effective waste management that transforms challenges into opportunities for future generations.`,
     ],
     image: "/truck.jpg",
   },

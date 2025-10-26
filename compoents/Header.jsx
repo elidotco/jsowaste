@@ -10,7 +10,7 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Renewables", href: "/Renewables" },
+  { name: "In JSO waste", href: "/insiders" },
   { name: "Blog", href: "/blog" },
 ];
 

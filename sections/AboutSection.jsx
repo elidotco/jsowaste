@@ -3,7 +3,7 @@ const heroData = {
     number: "50+",
     label: "YEARS OF EXPERIENCE",
   },
-  image: "/images/waste-management-workers.jpg",
+  image: "/garbage.webp",
   content: {
     badge: "WHO WE ARE",
     title: "JSO, the Future of Waste Management!",
@@ -39,7 +39,7 @@ function AboutSection() {
             <div className="mt-20 rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src={heroData.image}
-                alt="LAC Global Services"
+                alt="JSO WASTE AND RENEWABLES"
                 className="w-full h-full object-cover"
               />
             </div>

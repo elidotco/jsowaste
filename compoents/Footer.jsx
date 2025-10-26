@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-100 text-white py-16 min-h-[70vh] px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+    <footer className="bg-primary-100 relative  text-white py-16 min-h-[70vh] px-6">
+      <div className="max-w-7xl mx-auto  grid grid-cols-1 md:grid-cols-3 gap-12">
         {/* Company Info Section */}
         <div>
           <div className="flex items-center gap-3 mb-6">
@@ -63,7 +63,14 @@ const Footer = () => {
             </button>
           </form>
         </div>
+
+        <div className=" bottom-5 absolute   pt-6 text-center text-gray-200 text-sm">
+          &copy; {new Date().getFullYear()} JSO Waste and Renewables. All rights
+          reserved.
+        </div>
       </div>
+
+      {/* COpyright */}
     </footer>
   );
 };
