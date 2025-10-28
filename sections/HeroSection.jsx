@@ -8,8 +8,8 @@ const roboto = Roboto_Condensed({
 });
 const HeroSection = () => {
   return (
-    <section className={"w-full min-h-screen py-10 px-5 " + roboto.className}>
-      <div className="w-full min-h-[90vh] rounded-4xl text-center px-10 xl:px-48  relative xl:rounded-[64px] bg-primary-100 flex items-center flex-col gap-y-10  py-28 xl:pt-44 text-white">
+    <section className={"w-full  py-10 px-5 " + roboto.className}>
+      <div className="w-full min-h-[85vh] rounded-4xl text-center px-10 xl:px-48  relative xl:rounded-[64px] bg-primary-100 flex items-center flex-col gap-y-10  py-28 xl:pt-44 text-white">
         <div className="ellipse-1 absolute top-[169px] left-[365px] blur-[130px]"></div>
         <div className="ellipse-2 border left-2/5 md:left-auto  absolute bottom-[214px] lg:right-[284px] blur-[130px]"></div>
         {/* Content */}

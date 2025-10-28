@@ -1,5 +1,5 @@
 import { Geist, Roboto_Condensed } from "next/font/google";
-import "./globals.css";
+import "/globals.css";
 import { Footer, Header } from "@/compoents";
 
 const geistSans = Geist({
