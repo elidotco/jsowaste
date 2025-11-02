@@ -1,5 +1,5 @@
 import { Geist, Roboto_Condensed } from "next/font/google";
-
+import "./globals.css";
 import { Footer, Header } from "@/compoents";
 
 const geistSans = Geist({
@@ -18,10 +18,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <>
-      <Header />
-      {children}
-      <Footer />
-    </>
+    <html lang="en">
+      <body className={`${roboto.className} antialiased`}>{children}</body>
+    </html>
   );
 }
