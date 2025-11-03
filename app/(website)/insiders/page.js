@@ -133,7 +133,8 @@ function InJsoWastePage() {
       <header className="border-b-2 border-gray-200">
         <div className="max-w-5xl mx-auto px-6 py-12">
           <h1 className="text-5xl font-bold text-gray-900 mb-3">
-            {inJsoWasteData.hero.title}
+            {inJsoWasteData.hero.title} <br />
+            <p className="text-sm">these are placeholders</p>
           </h1>
           <p className="text-lg text-gray-600">
             {inJsoWasteData.hero.subtitle}
