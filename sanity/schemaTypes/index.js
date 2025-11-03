@@ -44,6 +44,13 @@ export const schema = {
           description: "Brief summary for previews and SEO",
         },
         {
+          name: "slug",
+          title: "Slug",
+          type: "text",
+          rows: 4,
+          description: "Url-friendly identifier",
+        },
+        {
           title: "Content",
           name: "content",
           type: "array",

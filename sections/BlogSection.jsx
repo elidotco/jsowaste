@@ -1,3 +1,5 @@
+import { urlFor } from "@/libs";
+
 const homepageData = {
   blogSection: {
     title: "OUR BLOGS & ARTICLES",
@@ -34,7 +36,7 @@ const homepageData = {
   },
 };
 
-function BlogSection() {
+function BlogSection({ data }) {
   return (
     <div className="bg-gray-50">
       {/* Blog Section */}
@@ -61,8 +63,8 @@ function BlogSection() {
           </div>
 
           {/* Blog Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {homepageData.blogSection.posts.map((post) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {data.map((post) => (
               <article
                 key={post.id}
                 className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
@@ -70,7 +72,7 @@ function BlogSection() {
                 {/* Blog Image */}
                 <div className="h-64 overflow-hidden">
                   <img
-                    src={post.image}
+                    src={urlFor(post.mainImage).url()}
                     alt={post.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />

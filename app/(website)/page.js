@@ -8,7 +8,7 @@ import { client } from "@/sanity/lib/client";
 
 const POSTS_QUERY = `*[
   _type == "post"
-]|order(publishedAt desc)[0...12]{_id, title, slug, publishedAt}`;
+]|order(publishedAt desc)[0...12]{_id, title, slug, mainImage, publishedAt}`;
 const options = { next: { revalidate: 30 } };
 
 export default async function Home() {
@@ -19,7 +19,7 @@ export default async function Home() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
-      <BlogSection />
+      <BlogSection data={posts} />
     </main>
   );
 }
