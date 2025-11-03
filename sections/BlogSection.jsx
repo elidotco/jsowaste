@@ -87,7 +87,7 @@ function BlogSection({ data }) {
                   <p className="text-gray-600 mb-4">{post.excerpt}</p>
 
                   <a
-                    href={post.link}
+                    href={post.slug ? `/blog/${post.slug}` : "#"}
                     className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-semibold transition-colors"
                   >
                     Learn more
