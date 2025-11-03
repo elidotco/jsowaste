@@ -66,7 +66,7 @@ function BlogSection({ data }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {data.map((post) => (
               <article
-                key={post.id}
+                key={post._id}
                 className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
               >
                 {/* Blog Image */}
