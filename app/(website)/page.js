@@ -6,10 +6,10 @@ import {
 } from "@/sections";
 import { client } from "@/sanity/lib/client";
 
-const POSTS_QUERY = `*[
+export const POSTS_QUERY = `*[
   _type == "post"
-]|order(publishedAt desc)[0...12]{_id, title, slug, mainImage, publishedAt}`;
-const options = { next: { revalidate: 30 } };
+]|order(publishedAt desc)[0...12]{_id, title, slug, mainImage, excerpt, publishedAt}`;
+export const options = { next: { revalidate: 30 } };
 
 export default async function Home() {
   const posts = await client.fetch(POSTS_QUERY, {}, options);

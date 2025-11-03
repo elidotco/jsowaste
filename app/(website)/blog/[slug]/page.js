@@ -1,6 +1,5 @@
-import { client } from "@/sanity/lib/client";
-import { options, POSTS_QUERY } from "../page";
-import { urlFor } from "@/libs";
+"use client";
+import { useState } from "react";
 
 const blogData = [
   {
@@ -21,9 +20,21 @@ const blogData = [
     date: "07/06/2024",
   },
 ];
-async function Home() {
-  const posts = await client.fetch(POSTS_QUERY, {}, options);
-  console.log("Posts:", posts);
+
+function Home() {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    console.log("Searching for:", searchQuery);
+    // Add your search logic here
+  };
+
+  const filteredBlogs = blogData.filter(
+    (blog) =>
+      blog.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      blog.excerpt.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <section className="bg-gray-100 py-16 pt-56 px-6">
@@ -34,10 +45,12 @@ async function Home() {
         </h2>
 
         {/* Search Bar */}
-        <form className="mb-12">
+        <form onSubmit={handleSearch} className="mb-12">
           <div className="relative max-w-md">
             <input
               type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search blog"
               className="w-full px-6 py-4 pr-12 rounded-full border border-gray-300 bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:border-green-400 transition-colors"
             />
@@ -64,7 +77,7 @@ async function Home() {
 
         {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((blog) => (
+          {filteredBlogs.map((blog) => (
             <article
               key={blog.id}
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
@@ -72,7 +85,7 @@ async function Home() {
               {/* Blog Image */}
               <div className="h-64 overflow-hidden">
                 <img
-                  src={urlFor(blog.mainImage).url()}
+                  src={blog.image}
                   alt={blog.title}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
@@ -95,6 +108,15 @@ async function Home() {
             </article>
           ))}
         </div>
+
+        {/* No Results Message */}
+        {filteredBlogs.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-gray-500 text-lg">
+              No blog posts found matching your search.
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );
