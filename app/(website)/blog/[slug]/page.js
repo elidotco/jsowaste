@@ -2,6 +2,7 @@ import { client } from "@/sanity/lib/client";
 import { options } from "../../page";
 import { notFound } from "next/navigation";
 import { PortableText } from "next-sanity";
+import { urlFor } from "@/libs";
 
 const blogPostData = {
   relatedPosts: {
@@ -123,7 +124,7 @@ async function BlogPostPage({ params }) {
             {/* Right Side - Featured Image */}
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src={post.featuredImage}
+                src={urlFor(post.mainImage).url()}
                 alt={post.title}
                 className="w-full h-full object-cover"
               />
